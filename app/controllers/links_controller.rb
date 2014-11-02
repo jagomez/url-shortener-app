@@ -10,6 +10,8 @@ class LinksController < ApplicationController
 
 	def create
 		@link = current_user.links.new(params[link])
+		@link.standardize_target_url!
+		
 		if @link.save
 			flash[:success] = "Link Created Successfully"
 			redirect_to links_path
@@ -17,8 +19,6 @@ class LinksController < ApplicationController
 			render 'new'
 	end
 
-	def redirect
-		@link = Link.find_by(:slug => params[:slug])
-		redirect_to @link.target_url
-	end
+	
+
 end
