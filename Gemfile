@@ -3,14 +3,17 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
-end
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
+gem 'quiet_assets'
+gem 'simple_form'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+gem 'devise'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
